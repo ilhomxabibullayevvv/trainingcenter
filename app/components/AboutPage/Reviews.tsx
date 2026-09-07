@@ -93,7 +93,7 @@ export default function Reviews() {
                 alert("Заявка отправлена!");
                 setIsModalOpen(false);
               }}
-              className="flex flex-col gap-4"
+              className="flex flex-col gap-10"
             >
               <input
                 type="text"
