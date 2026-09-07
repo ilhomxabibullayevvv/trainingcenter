@@ -6,6 +6,8 @@ import { useState } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [language, setLanguage] = useState<"RU" | "UZ">("RU");
 
   const menu = [
     { title: "Курсы обучения", href: "/#" },
@@ -18,6 +20,13 @@ export default function Header() {
     { title: "Акции", href: "/PromotionsPage" },
     { title: "Магазин", href: "#" },
   ];
+
+  const changeLanguage = (newLanguage: "RU" | "UZ") => {
+    setLanguage(newLanguage);
+    setIsLanguageOpen(false);
+  };
+
+  const currentFlag = language === "RU" ? "/flag.svg" : "/uzbekistan-flag.svg";
 
   return (
     <>
@@ -68,16 +77,55 @@ export default function Header() {
                     />
                   </a>
                 </div>
-                <button type="button" className="flex items-center gap-2">
-                  <Image
-                    src="/flag.svg"
-                    alt="Русский"
-                    width={25}
-                    height={18}
-                    className="h-[18] w-[25]"
-                  />
-                  <span className="text-[12px] text-[#55A630]">⌄</span>
-                </button>
+                <div className="relative">
+                  <button
+                    type="button"
+                    onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                    className="flex items-center gap-2"
+                    aria-label="Выбрать язык"
+                  >
+                    <Image
+                      src={currentFlag}
+                      alt={language}
+                      width={25}
+                      height={18}
+                      className="h-[18] w-[25]"
+                    />
+                    <span className="text-[12px] text-[#55A630]">⌄</span>
+                  </button>
+                  {isLanguageOpen && (
+                    <div className="absolute right-0 top-[32] z-50 w-[100] rounded-md border border-[#DDE8D7] bg-white p-1 shadow-lg">
+                      <button
+                        type="button"
+                        onClick={() => changeLanguage("RU")}
+                        className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
+                      >
+                        <Image
+                          src="/flag.svg"
+                          alt="Русский"
+                          width={25}
+                          height={18}
+                          className="h-[18] w-[25]"
+                        />
+                        <span>RU</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => changeLanguage("UZ")}
+                        className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
+                      >
+                        <Image
+                          src="/uzbekistan-flag.svg"
+                          alt="O'zbekcha"
+                          width={25}
+                          height={18}
+                          className="h-[18] w-[25]"
+                        />
+                        <span>UZ</span>
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
             <nav className="flex h-[45] items-center justify-between">
@@ -153,25 +201,62 @@ export default function Header() {
               </button>
             </div>
             <div className="mt-3 border-b border-dashed border-[#D4D8DB]" />
-            <button type="button" className="mt-5 flex items-center gap-2">
-              <Image
-                src="/flag.svg"
-                alt="Русский"
-                width={30}
-                height={20}
-                className="h-[20] w-[30]"
-              />
-              <span className="text-[13px] text-[#55A630]">⌄</span>
-            </button>
+            <div className="relative mt-5">
+              <button
+                type="button"
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                className="flex items-center gap-2"
+                aria-label="Выбрать язык"
+              >
+                <Image
+                  src={currentFlag}
+                  alt={language}
+                  width={30}
+                  height={20}
+                  className="h-[20] w-[30]"
+                />
+                <span className="text-[13px] text-[#55A630]">⌄</span>
+              </button>
+              {isLanguageOpen && (
+                <div className="absolute left-0 top-[32] z-50 w-[100] rounded-md border border-[#DDE8D7] bg-white p-1 shadow-lg">
+                  <button
+                    type="button"
+                    onClick={() => changeLanguage("RU")}
+                    className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
+                  >
+                    <Image
+                      src="/flag.svg"
+                      alt="Русский"
+                      width={25}
+                      height={18}
+                      className="h-[18] w-[25]"
+                    />
+                    <span>RU</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => changeLanguage("UZ")}
+                    className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
+                  >
+                    <Image
+                      src="/uzbekistan-flag.svg"
+                      alt="O'zbekcha"
+                      width={25}
+                      height={18}
+                      className="h-[18] w-[25]"
+                    />
+                    <span>UZ</span>
+                  </button>
+                </div>
+              )}
+            </div>
             <nav className="mt-7 flex flex-col">
-              {menu.map((item, index) => (
+              {menu.map((item) => (
                 <Link
                   key={item.title}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`py-[7] text-[15px] text-[#424242] transition hover:text-[#55A630] ${
-                    index === 0 ? "text-[#55A630]" : ""
-                  }`}
+                  className="py-[7] text-[15px] text-[#424242] transition hover:text-[#55A630]"
                 >
                   {item.title}
                 </Link>
