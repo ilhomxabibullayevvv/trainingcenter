@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Courses() {
   return (
     <section className="py-10">
-      <div className="mx-auto w-full max-w-[960] px-5">
+      <div className="mx-auto w-full max-w-[1200] px-5">
         <div className="mb-8">
           <h1 className="mb-3 text-[32px] font-bold text-[#424242] text-center">
             КУРСЫ ОБУЧЕНИЯ

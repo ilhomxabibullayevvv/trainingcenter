@@ -1,7 +1,7 @@
 export default function CourseHero() {
   return (
     <section className="py-10">
-      <div className="mx-auto w-full max-w-[960] px-5">
+      <div className="mx-auto w-full max-w-[1200] px-5">
         <p className="mb-4 text-[14px] text-[#55A630]">
           Старт курса: 10 января
         </p>

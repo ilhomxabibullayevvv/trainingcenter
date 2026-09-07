@@ -20,7 +20,7 @@ const items = [
 export default function WhatYouLearn() {
   return (
     <section className="bg-[#F7F7F7] py-12">
-      <div className="mx-auto w-full max-w-[960] px-5">
+      <div className="mx-auto w-full max-w-[1200] px-5">
         <h2 className="mb-8 text-[30px] font-bold text-[#424242]">
           Чему вы научитесь на курсе
         </h2>

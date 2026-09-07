@@ -1,7 +1,7 @@
 export default function CourseDescription() {
   return (
     <section className="py-10">
-      <div className="mx-auto w-full max-w-[960] px-5">
+      <div className="mx-auto w-full max-w-[1200] px-5">
         <div className="max-w-[850] space-y-5 text-[15px] leading-7 text-[#424242]">
           <p>
             Процедура ботулинотерапия - это инъекционная методика для устранения

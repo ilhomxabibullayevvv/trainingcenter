@@ -19,7 +19,7 @@ const practice = [
 export default function CourseProgram() {
   return (
     <section className="py-10">
-      <div className="mx-auto w-full max-w-[960] px-5">
+      <div className="mx-auto w-full max-w-[1200] px-5">
         <h2 className="mb-8 text-[30px] font-bold text-[#424242]">
           Программа курса
         </h2>

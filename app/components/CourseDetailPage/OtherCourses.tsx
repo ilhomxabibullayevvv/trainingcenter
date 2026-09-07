@@ -22,7 +22,7 @@ const courses = [
 export default function OtherCourses() {
   return (
     <section className="py-12">
-      <div className="mx-auto w-full max-w-[960] px-5">
+      <div className="mx-auto w-full max-w-[1200] px-5">
         <h2 className="mb-8 text-[30px] font-bold text-[#424242]">
           Как это было в прошлый раз
         </h2>

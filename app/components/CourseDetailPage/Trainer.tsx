@@ -1,7 +1,7 @@
 export default function Trainer() {
   return (
     <section className="py-12">
-      <div className="mx-auto w-full max-w-[960] px-5">
+      <div className="mx-auto w-full max-w-[1200] px-5">
         <h2 className="mb-8 text-[30px] font-bold text-[#424242]">Тренер</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="h-[400] rounded-lg bg-[#DDE8D7]" />
