@@ -48,7 +48,7 @@ export default function Footer() {
               <Link
                 key={item.title}
                 href={item.href}
-                className="text-[11px] text-white hover:text-[#55A630]"
+                className="text-[11px] text-white hover:text-[#55A630] max-w-[100]"
               >
                 {item.title}
               </Link>
