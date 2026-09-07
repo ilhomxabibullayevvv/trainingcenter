@@ -26,7 +26,7 @@ export default function Header() {
     setIsLanguageOpen(false);
   };
 
-  const currentFlag = language === "RU" ? "/flag.svg" : "/uzbekistan-flag.svg";
+  const currentFlag = language === "RU" ? "/flag.svg" : "/flag.png";
 
   return (
     <>
