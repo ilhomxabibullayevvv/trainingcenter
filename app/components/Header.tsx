@@ -26,7 +26,7 @@ export default function Header() {
     setIsLanguageOpen(false);
   };
 
-  const currentFlag = language === "RU" ? "/flag.svg" : "/flag.png";
+  const currentFlag = language === "RU" ? "/flag.svg" : "/flag2.svg";
 
   return (
     <>
@@ -115,7 +115,7 @@ export default function Header() {
                         className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
                       >
                         <Image
-                          src="/flag.png"
+                          src="/flag2.svg"
                           alt="O'zbekcha"
                           width={25}
                           height={18}
@@ -239,7 +239,7 @@ export default function Header() {
                     className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
                   >
                     <Image
-                      src="/flag.png"
+                      src="/flag2.svg"
                       alt="O'zbekcha"
                       width={25}
                       height={18}
