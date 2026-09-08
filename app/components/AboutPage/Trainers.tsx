@@ -1,34 +1,43 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "../../context/LanguageContext";
 
 const trainers = [
   {
     name: "Марина Спивак",
-    position: "Главный тренер",
+    positionRU: "Главный тренер",
+    positionUZ: "Bosh trener",
     image: "/rectangle17.jpg",
   },
   {
     name: "Елена Белогурова",
-    position: "Тренер",
+    positionRU: "Тренер",
+    positionUZ: "Trener",
     image: "/rectangle18.jpg",
   },
   {
     name: "Алина Ядчишина",
-    position: "Тренер",
+    positionRU: "Тренер",
+    positionUZ: "Trener",
     image: "/rectangle19.jpg",
   },
   {
     name: "Юлия Щукина",
-    position: "Руководитель сети клиник LAZERINI",
+    positionRU: "Руководитель сети клиник LAZERINI",
+    positionUZ: "LAZERINI klinikalari tarmog‘i rahbari",
     image: "/rectangle20.jpg",
   },
 ];
 
 export default function Trainers() {
+  const { language } = useLanguage();
+
   return (
     <section className="py-16">
       <div className="mx-auto max-w-[1200] px-5">
         <h2 className="mb-10 text-center text-[32px] font-bold text-[#424242]">
-          Наши тренера
+          {language === "RU" ? "Наши тренера" : "Bizning trenerlarimiz"}
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           {trainers.map((trainer) => (
@@ -45,7 +54,7 @@ export default function Trainers() {
                 {trainer.name}
               </h3>
               <p className="mt-2 text-[14px] text-[#424242]">
-                {trainer.position}
+                {language === "RU" ? trainer.positionRU : trainer.positionUZ}
               </p>
             </div>
           ))}

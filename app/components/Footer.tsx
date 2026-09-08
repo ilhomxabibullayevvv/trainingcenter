@@ -1,17 +1,49 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Footer() {
+  const { language } = useLanguage();
+
   const menu = [
-    { title: "Курсы обучения", href: "/#" },
-    { title: "Акции", href: "/promotions" },
-    { title: "Вебинары", href: "/#" },
-    { title: "О нас", href: "/AboutPage" },
-    { title: "Видео-уроки", href: "/VideoLessonsPage" },
-    { title: "Блог", href: "/BlogArticlePage" },
-    { title: "Прайс", href: "/PricePage" },
-    { title: "Магазин", href: "/#" },
-    { title: "Рассписание", href: "/SchedulePage" },
+    {
+      title: language === "RU" ? "Курсы обучения" : "O'quv kurslari",
+      href: "/#",
+    },
+    {
+      title: language === "RU" ? "Акции" : "Aksiyalar",
+      href: "/promotions",
+    },
+    {
+      title: language === "RU" ? "Вебинары" : "Vebinarlar",
+      href: "/#",
+    },
+    {
+      title: language === "RU" ? "О нас" : "Biz haqimizda",
+      href: "/AboutPage",
+    },
+    {
+      title: language === "RU" ? "Видео-уроки" : "Video-darslar",
+      href: "/VideoLessonsPage",
+    },
+    {
+      title: language === "RU" ? "Блог" : "Blog",
+      href: "/BlogArticlePage",
+    },
+    {
+      title: language === "RU" ? "Прайс" : "Narxlar",
+      href: "/PricePage",
+    },
+    {
+      title: language === "RU" ? "Магазин" : "Do'kon",
+      href: "/#",
+    },
+    {
+      title: language === "RU" ? "Рассписание" : "Jadval",
+      href: "/SchedulePage",
+    },
   ];
 
   return (
@@ -34,21 +66,20 @@ export default function Footer() {
               className="h-auto w-[80]"
             />
           </div>
-          <a
-            href="tel:0800508622"
-            className="mb-2 block text-[16px] font-bold"
-          >
+          <a href="tel:0800508622" className="mb-2 block text-[16px] font-bold">
             0 (800) 508-622
           </a>
           <p className="mb-8 text-[13px]">
-            Харьков, Клочковская, д. 3
+            {language === "RU"
+              ? "Харьков, Клочковская, д. 3"
+              : "Xarkov, Klochkovskaya, 3-uy"}
           </p>
           <div className="grid grid-cols-2 gap-[15]">
             {menu.map((item) => (
               <Link
                 key={item.title}
                 href={item.href}
-                className="text-[11px] text-white hover:text-[#55A630] max-w-[100]"
+                className="max-w-[100] text-[11px] text-white hover:text-[#55A630]"
               >
                 {item.title}
               </Link>
@@ -73,7 +104,9 @@ export default function Footer() {
             </a>
           </div>
           <p className="mt-6 text-[10px] text-white/50">
-            Политика конфиденциальности
+            {language === "RU"
+              ? "Политика конфиденциальности"
+              : "Maxfiylik siyosati"}
           </p>
         </div>
       </div>

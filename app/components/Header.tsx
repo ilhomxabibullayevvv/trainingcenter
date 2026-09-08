@@ -3,30 +3,59 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const [language, setLanguage] = useState<"RU" | "UZ">("RU");
+
+  const { language, changeLanguage } = useLanguage();
 
   const menu = [
-    { title: "Курсы обучения", href: "/#" },
-    { title: "Вебинары", href: "/#" },
-    { title: "Видео-уроки", href: "/VideoLessonsPage" },
-    { title: "Блог", href: "/BlogArticlePage" },
-    { title: "О нас", href: "/AboutPage" },
-    { title: "Прайс", href: "/PricePage" },
-    { title: "Рассписание", href: "/SchedulePage" },
-    { title: "Акции", href: "/PromotionsPage" },
-    { title: "Магазин", href: "#" },
+    {
+      title: language === "RU" ? "Курсы обучения" : "O'quv kurslari",
+      href: "/#",
+    },
+    {
+      title: language === "RU" ? "Вебинары" : "Vebinarlar",
+      href: "/#",
+    },
+    {
+      title: language === "RU" ? "Видео-уроки" : "Video-darslar",
+      href: "/VideoLessonsPage",
+    },
+    {
+      title: language === "RU" ? "Блог" : "Blog",
+      href: "/BlogArticlePage",
+    },
+    {
+      title: language === "RU" ? "О нас" : "Biz haqimizda",
+      href: "/AboutPage",
+    },
+    {
+      title: language === "RU" ? "Прайс" : "Narxlar",
+      href: "/PricePage",
+    },
+    {
+      title: language === "RU" ? "Рассписание" : "Jadval",
+      href: "/SchedulePage",
+    },
+    {
+      title: language === "RU" ? "Акции" : "Aksiyalar",
+      href: "/PromotionsPage",
+    },
+    {
+      title: language === "RU" ? "Магазин" : "Do'kon",
+      href: "#",
+    },
   ];
 
-  const changeLanguage = (newLanguage: "RU" | "UZ") => {
-    setLanguage(newLanguage);
+  const currentFlag = language === "RU" ? "/flag.svg" : "/flag2.svg";
+
+  const handleLanguageChange = (newLanguage: "RU" | "UZ") => {
+    changeLanguage(newLanguage);
     setIsLanguageOpen(false);
   };
-
-  const currentFlag = language === "RU" ? "/flag.svg" : "/flag2.svg";
 
   return (
     <>
@@ -97,7 +126,7 @@ export default function Header() {
                     <div className="absolute right-0 top-[32] z-50 w-[100] rounded-md border border-[#DDE8D7] bg-white p-1 shadow-lg">
                       <button
                         type="button"
-                        onClick={() => changeLanguage("RU")}
+                        onClick={() => handleLanguageChange("RU")}
                         className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
                       >
                         <Image
@@ -111,7 +140,7 @@ export default function Header() {
                       </button>
                       <button
                         type="button"
-                        onClick={() => changeLanguage("UZ")}
+                        onClick={() => handleLanguageChange("UZ")}
                         className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
                       >
                         <Image
@@ -221,7 +250,7 @@ export default function Header() {
                 <div className="absolute left-0 top-[32] z-50 w-[100] rounded-md border border-[#DDE8D7] bg-white p-1 shadow-lg">
                   <button
                     type="button"
-                    onClick={() => changeLanguage("RU")}
+                    onClick={() => handleLanguageChange("RU")}
                     className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
                   >
                     <Image
@@ -235,7 +264,7 @@ export default function Header() {
                   </button>
                   <button
                     type="button"
-                    onClick={() => changeLanguage("UZ")}
+                    onClick={() => handleLanguageChange("UZ")}
                     className="flex w-full items-center gap-2 rounded px-2 py-2 text-left text-[12px] text-[#424242] transition hover:bg-[#DDE8D7]"
                   >
                     <Image

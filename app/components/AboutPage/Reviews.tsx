@@ -1,39 +1,53 @@
 "use client";
 
 import { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 const reviews = [
   {
     name: "Ирина Бубличенко",
     date: "15.09.2020",
-    text: "Вчера была на карбокситерапии первый раз. Сомневалась в эффективности процедуры и очень зря! Цвет лица выровнялся и кожа подтянулась, воспаления стали не такими заметными. Эффект был сразу после процедуры и я планирую пройти весь курс. Алиночка профессионал своего дела и отличный собеседник, всегда рекомендует самые эффективные процедуры.",
+    textRU:
+      "Вчера была на карбокситерапии первый раз. Сомневалась в эффективности процедуры и очень зря! Цвет лица выровнялся и кожа подтянулась, воспаления стали не такими заметными. Эффект был сразу после процедуры и я планирую пройти весь курс. Алиночка профессионал своего дела и отличный собеседник, всегда рекомендует самые эффективные процедуры.",
+    textUZ:
+      "Kecha birinchi marta karboksiterapiya muolajasini oldim. Muolajaning samaradorligiga shubha qilgandim, lekin bu bekorga ekan! Yuz rangi tekislandi, terim taranglashdi va yallig‘lanishlar ancha kamroq seziladigan bo‘ldi. Ta’siri muolajadan keyin darhol sezildi va men to‘liq kursni o‘tishni rejalashtiryapman. Alinochka o‘z ishining professional mutaxassisi va ajoyib suhbatdosh, har doim eng samarali muolajalarni tavsiya qiladi.",
   },
   {
     name: "Ирина Бубличенко",
     date: "15.09.2020",
-    text: "Вчера была на карбокситерапии первый раз. Сомневалась в эффективности процедуры и очень зря! Цвет лица выровнялся и кожа подтянулась, воспаления стали не такими заметными. Эффект был сразу после процедуры и я планирую пройти весь курс.",
+    textRU:
+      "Вчера была на карбокситерапии первый раз. Сомневалась в эффективности процедуры и очень зря! Цвет лица выровнялся и кожа подтянулась, воспаления стали не такими заметными. Эффект был сразу после процедуры и я планирую пройти весь курс.",
+    textUZ:
+      "Kecha birinchi marta karboksiterapiya muolajasini oldim. Muolajaning samaradorligiga shubha qilgandim, lekin bu bekorga ekan! Yuz rangi tekislandi, terim taranglashdi va yallig‘lanishlar ancha kamroq seziladigan bo‘ldi. Ta’siri muolajadan keyin darhol sezildi va men to‘liq kursni o‘tishni rejalashtiryapman.",
   },
   {
     name: "Ирина Бубличенко",
     date: "15.09.2020",
-    text: "Вчера была на карбокситерапии первый раз. Сомневалась в эффективности процедуры и очень зря! Цвет лица выровнялся и кожа подтянулась, воспаления стали не такими заметными. Эффект был сразу после процедуры и я планирую пройти весь курс. Алиночка профессионал своего дела и отличный собеседник.",
+    textRU:
+      "Вчера была на карбокситерапии первый раз. Сомневалась в эффективности процедуры и очень зря! Цвет лица выровнялся и кожа подтянулась, воспаления стали не такими заметными. Эффект был сразу после процедуры и я планирую пройти весь курс. Алиночка профессионал своего дела и отличный собеседник.",
+    textUZ:
+      "Kecha birinchi marta karboksiterapiya muolajasini oldim. Muolajaning samaradorligiga shubha qilgandim, lekin bu bekorga ekan! Yuz rangi tekislandi, terim taranglashdi va yallig‘lanishlar ancha kamroq seziladigan bo‘ldi. Ta’siri muolajadan keyin darhol sezildi va men to‘liq kursni o‘tishni rejalashtiryapman. Alinochka o‘z ishining professional mutaxassisi va ajoyib suhbatdosh.",
   },
   {
     name: "Ирина Бубличенко",
     date: "15.09.2020",
-    text: "Вчера была на карбокситерапии первый раз. Сомневалась в эффективности процедуры и очень зря! Цвет лица выровнялся и кожа подтянулась, воспаления стали не такими заметными. Эффект был сразу после процедуры и я планирую пройти весь курс. Алиночка профессионал своего дела и отличный собеседник, всегда рекомендует самые эффективные процедуры.",
+    textRU:
+      "Вчера была на карбокситерапии первый раз. Сомневалась в эффективности процедуры и очень зря! Цвет лица выровнялся и кожа подтянулась, воспаления стали не такими заметными. Эффект был сразу после процедуры и я планирую пройти весь курс. Алиночка профессионал своего дела и отличный собеседник, всегда рекомендует самые эффективные процедуры.",
+    textUZ:
+      "Kecha birinchi marta karboksiterapiya muolajasini oldim. Muolajaning samaradorligiga shubha qilgandim, lekin bu bekorga ekan! Yuz rangi tekislandi, terim taranglashdi va yallig‘lanishlar ancha kamroq seziladigan bo‘ldi. Ta’siri muolajadan keyin darhol sezildi va men to‘liq kursni o‘tishni rejalashtiryapman. Alinochka o‘z ishining professional mutaxassisi va ajoyib suhbatdosh, har doim eng samarali muolajalarni tavsiya qiladi.",
   },
 ];
 
 export default function Reviews() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { language } = useLanguage();
 
   return (
     <>
       <section className="py-16">
         <div className="mx-auto max-w-[1200] px-4">
           <h2 className="mb-10 text-center text-[32px] font-bold text-[#424242]">
-            Отзывы
+            {language === "RU" ? "Отзывы" : "Sharhlar"}
           </h2>
           <div className="bg-[#ECF9EB] px-6 py-10 md:px-12 md:py-12">
             <div className="flex flex-col items-center gap-8">
@@ -51,7 +65,7 @@ export default function Reviews() {
                     </p>
                   </div>
                   <p className="max-w-[546] text-[13px] leading-5 text-[#666]">
-                    {review.text}
+                    {language === "RU" ? review.textRU : review.textUZ}
                   </p>
                 </div>
               ))}
@@ -62,7 +76,7 @@ export default function Reviews() {
                 onClick={() => setIsModalOpen(true)}
                 className="rounded-md border border-[#55A630] px-15 py-4 font-medium text-[#55A630] transition hover:bg-[#55A630] hover:text-white"
               >
-                Оставить отзыв
+                {language === "RU" ? "Оставить отзыв" : "Sharh qoldirish"}
               </button>
             </div>
           </div>
@@ -85,30 +99,36 @@ export default function Reviews() {
               ×
             </button>
             <h3 className="mb-6 text-center text-[16px] font-medium text-[#424242]">
-              Оставить заявку
+              {language === "RU" ? "Оставить заявку" : "Ariza qoldirish"}
             </h3>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Заявка отправлена!");
+                alert(
+                  language === "RU" ? "Заявка отправлена!" : "Ariza yuborildi!",
+                );
                 setIsModalOpen(false);
               }}
               className="flex flex-col gap-10"
             >
               <input
                 type="text"
-                placeholder="Ваше имя"
+                placeholder={language === "RU" ? "Ваше имя" : "Ismingiz"}
                 required
                 className="h-[38] w-full bg-[#F1F1F1] px-3 text-[11px] text-[#424242] outline-none placeholder:text-[#999] focus:ring-1 focus:ring-[#55A630]"
               />
               <input
                 type="tel"
-                placeholder="Ваш номер телефона"
+                placeholder={
+                  language === "RU"
+                    ? "Ваш номер телефона"
+                    : "Telefon raqamingiz"
+                }
                 required
                 className="h-[38] w-full bg-[#F1F1F1] px-3 text-[11px] text-[#424242] outline-none placeholder:text-[#999] focus:ring-1 focus:ring-[#55A630]"
               />
               <textarea
-                placeholder="Ваш отзыв"
+                placeholder={language === "RU" ? "Ваш отзыв" : "Sharhingiz"}
                 required
                 className="h-[120] w-full resize-none bg-[#F1F1F1] px-3 py-3 text-[11px] text-[#424242] outline-none placeholder:text-[#999] focus:ring-1 focus:ring-[#55A630]"
               />
@@ -117,7 +137,7 @@ export default function Reviews() {
                   type="submit"
                   className="rounded-md border border-[#55A630] px-10 py-2 font-medium text-[#55A630] transition hover:bg-[#55A630] hover:text-white"
                 >
-                  Отправить заявку
+                  {language === "RU" ? "Отправить заявку" : "Arizani yuborish"}
                 </button>
               </div>
             </form>

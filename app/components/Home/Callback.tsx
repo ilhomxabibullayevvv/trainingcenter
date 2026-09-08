@@ -1,29 +1,41 @@
+"use client";
+
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function Callback() {
+  const { language } = useLanguage();
+
   return (
     <section className="py-16">
-      <div className="mx-auto h-[526] max-w-[1200] px-5 p-[90] text-center shadow-[-2px_2px_20px_0px_#42424226]">
+      <div className="mx-auto h-[526] max-w-[1200] p-[90] px-5 text-center shadow-[-2px_2px_20px_0px_#42424226]">
         <h2 className="mb-4 text-3xl font-bold text-[#55A630]">
-          Закажите обратный звонок
+          {language === "RU"
+            ? "Закажите обратный звонок"
+            : "Qayta qo‘ng‘iroq buyurtma qiling"}
         </h2>
         <p className="mb-8 text-[#424242]">
-          Оставьте заявку в форме и наш менеджер свяжется с вами
+          {language === "RU"
+            ? "Оставьте заявку в форме и наш менеджер свяжется с вами"
+            : "Formani to‘ldiring va menejerimiz siz bilan bog‘lanadi"}
         </p>
         <form className="flex flex-col items-center gap-5">
           <input
             type="text"
-            placeholder="Ваше имя"
+            placeholder={language === "RU" ? "Ваше имя" : "Ismingiz"}
             className="w-full max-w-[427] border border-[#55A630] px-5 py-4 outline-none"
           />
           <input
             type="tel"
-            placeholder="Ваш номер телефона"
+            placeholder={
+              language === "RU" ? "Ваш номер телефона" : "Telefon raqamingiz"
+            }
             className="w-full max-w-[427] border border-[#55A630] px-5 py-4 outline-none"
           />
           <button
             type="submit"
             className="w-full max-w-[427] rounded-md border border-[#55A630] px-7 py-4 font-medium text-[#55A630] transition hover:bg-[#55A630] hover:text-white"
           >
-            Отправить
+            {language === "RU" ? "Отправить" : "Yuborish"}
           </button>
         </form>
       </div>

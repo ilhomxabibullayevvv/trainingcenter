@@ -1,64 +1,78 @@
+"use client";
+
 import Image from "next/image";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function UsefulMaterials() {
+  const { language } = useLanguage();
+
   return (
     <section className="py-10">
       <div className="mx-auto w-full max-w-[1200] px-5">
         <h1 className="mb-30 text-center text-[32px] font-bold text-[#424242]">
-          Полезные материалы
+          {language === "RU" ? "Полезные материалы" : "Foydali materiallar"}
         </h1>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <article className="overflow-hidden rounded-lg bg-white">
             <Image
               src="/rectangle12.jpg"
-              alt="Полезные материалы"
+              alt={
+                language === "RU" ? "Полезные материалы" : "Foydali materiallar"
+              }
               width={367.0008239746094}
               height={242}
               className="h-[200] w-full object-cover"
             />
             <div className="p-5">
               <h3 className="mb-6 text-[16px] font-medium leading-6 text-[#424242]">
-                Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и
-                какие существуют альтернативы?
+                {language === "RU"
+                  ? "Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и какие существуют альтернативы?"
+                  : "Bo‘yin, dekolte va qo‘l terisini tuzatishda mezoterapiya dolzarbmi va qanday muqobil usullar mavjud?"}
               </h3>
               <h3 className="text-right text-[14px] font-medium text-[#55A630]">
-                Читать полностью
+                {language === "RU" ? "Читать полностью" : "To‘liq o‘qish"}
               </h3>
             </div>
           </article>
           <article className="overflow-hidden rounded-lg bg-white">
             <Image
               src="/rectangle12.jpg"
-              alt="Полезные материалы"
+              alt={
+                language === "RU" ? "Полезные материалы" : "Foydali materiallar"
+              }
               width={380}
               height={200}
               className="h-[200] w-full object-cover"
             />
             <div className="p-5">
               <h3 className="mb-6 text-[16px] font-medium leading-6 text-[#424242]">
-                Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и
-                какие существуют альтернативы?
+                {language === "RU"
+                  ? "Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и какие существуют альтернативы?"
+                  : "Bo‘yin, dekolte va qo‘l terisini tuzatishda mezoterapiya dolzarbmi va qanday muqobil usullar mavjud?"}
               </h3>
               <h2 className="text-right text-[14px] font-medium text-[#55A630]">
-                Читать полностью
+                {language === "RU" ? "Читать полностью" : "To‘liq o‘qish"}
               </h2>
             </div>
           </article>
           <article className="overflow-hidden rounded-lg bg-white">
             <Image
               src="/rectangle12.jpg"
-              alt="Полезные материалы"
+              alt={
+                language === "RU" ? "Полезные материалы" : "Foydali materiallar"
+              }
               width={380}
               height={200}
               className="h-[200] w-full object-cover"
             />
             <div className="p-5">
               <h3 className="mb-6 text-[16px] font-medium leading-6 text-[#424242]">
-                Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и
-                какие существуют альтернативы?
+                {language === "RU"
+                  ? "Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и какие существуют альтернативы?"
+                  : "Bo‘yin, dekolte va qo‘l terisini tuzatishda mezoterapiya dolzarbmi va qanday muqobil usullar mavjud?"}
               </h3>
               <h3 className="text-right text-[14px] font-medium text-[#55A630]">
-                Читать полностью
+                {language === "RU" ? "Читать полностью" : "To‘liq o‘qish"}
               </h3>
             </div>
           </article>
