@@ -14,7 +14,7 @@ export default function Footer() {
     },
     {
       title: language === "RU" ? "Акции" : "Aksiyalar",
-      href: "/promotions",
+      href: "/PromotionsPage",
     },
     {
       title: language === "RU" ? "Вебинары" : "Vebinarlar",
