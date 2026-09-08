@@ -30,7 +30,7 @@ export default function Hero() {
                 {language === "RU" ? "Зарегистрироваться" : "Ro'yxatdan o'tish"}
               </button>
 
-              <button className="rounded-md border border-[#55A630] px-7 py-4 font-medium text-[#55A630] transition hover:bg-[#55A630] hover:text-white">
+              <button className="rounded-md border border-[#55A630] px-9 py-4 font-medium text-[#55A630] transition hover:bg-[#55A630] hover:text-white">
                 {language === "RU" ? "Узнать подробнее" : "Batafsil ma'lumot"}
               </button>
             </div>
