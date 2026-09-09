@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "image": "/rectangle12.jpg",
+    "title": {
+      "RU": "Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и какие существуют альтернативы?",
+      "UZ": "Bo‘yin, dekolte va qo‘l terisini tuzatishda mezoterapiya dolzarbmi va qanday muqobil usullar mavjud?"
+    },
+    "link": "/BlogArticle"
+  },
+  {
+    "id": 2,
+    "image": "/rectangle12.jpg",
+    "title": {
+      "RU": "Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и какие существуют альтернативы?",
+      "UZ": "Bo‘yin, dekolte va qo‘l terisini tuzatishda mezoterapiya dolzarbmi va qanday muqobil usullar mavjud?"
+    },
+    "link": "/BlogArticle"
+  },
+  {
+    "id": 3,
+    "image": "/rectangle12.jpg",
+    "title": {
+      "RU": "Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и какие существуют альтернативы?",
+      "UZ": "Bo‘yin, dekolte va qo‘l terisini tuzatishda mezoterapiya dolzarbmi va qanday muqobil usullar mavjud?"
+    },
+    "link": "/BlogArticle"
+  }
+]

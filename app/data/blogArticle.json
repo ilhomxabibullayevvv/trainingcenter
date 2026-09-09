@@ -1,0 +1,41 @@
+{
+  "image": "/rectangle12.jpg",
+  "imageAlt": {
+    "RU": "Видео-урок",
+    "UZ": "Video-dars"
+  },
+  "title": {
+    "RU": "Актуальна ли мезотерапия в коррекции шеи, декольте, кистей рук и какие существуют альтернативы?",
+    "UZ": "Bo‘yin, dekolte va qo‘l panjalarini tuzatishda mezoterapiya dolzarbmi va qanday muqobil usullar mavjud?"
+  },
+  "content": [
+    {
+      "RU": "Можно написать любое количество текста, лирического описания компании.",
+      "UZ": "Bu yerda kompaniya haqida istalgan hajmdagi batafsil va mazmunli matn yozish mumkin."
+    },
+    {
+      "RU": "Ведущий учебный центр эстетической косметологии. Более 5 лет мы проводим сертифицированные курсы профессионального образования в области косметологии и индустрии красоты.",
+      "UZ": "Estetik kosmetologiya bo‘yicha yetakchi o‘quv markazi. 5 yildan ortiq vaqt davomida kosmetologiya va go‘zallik sanoati sohasida sertifikatlangan professional ta’lim kurslarini o‘tkazib kelmoqdamiz."
+    },
+    {
+      "RU": "В данный момент в Харькове нет аналогов нашего учебного центра по уровню подготовки и разнообразию читаемых курсов. Все выпускники нашего учебного центра востребованы в: институтах омоложения и здоровья, Спа-центрах, салонах красоты, частных клиниках и других организация в сфере.",
+      "UZ": "Hozirgi vaqtda Xarkovda tayyorgarlik darajasi va o‘qitiladigan kurslarning xilma-xilligi bo‘yicha bizning o‘quv markazimizga teng keladigan markaz yo‘q. Markazimizning barcha bitiruvchilariga yoshartirish va salomatlik institutlari, SPA-markazlar, go‘zallik salonlari, xususiy klinikalar va boshqa tashkilotlarda talab mavjud."
+    },
+    {
+      "RU": "Мы проводим повышения квалификации, уникальные мастер классы. Курсы косметолог Харьков - это хорошее вложение, инвестиция в будущий заработок специалиста получившего наши документы, окончив обучение, и получив практические знания.",
+      "UZ": "Biz malaka oshirish kurslari va noyob mahorat darslarini o‘tkazamiz. Xarkovdagi kosmetologiya kurslari — bizning hujjatlarimizni olgan, ta’limni tamomlagan va amaliy bilimlarga ega bo‘lgan mutaxassisning kelajakdagi daromadiga yaxshi sarmoyadir."
+    },
+    {
+      "RU": "В данный момент в Харькове нет аналогов нашего учебного центра по уровню подготовки и разнообразию читаемых курсов. Все выпускники нашего учебного центра востребованы в: институтах омоложения и здоровья, Спа-центрах, салонах красоты, частных клиниках и других организация в сфере.",
+      "UZ": "Hozirgi vaqtda Xarkovda tayyorgarlik darajasi va o‘qitiladigan kurslarning xilma-xilligi bo‘yicha bizning o‘quv markazimizga teng keladigan markaz yo‘q. Markazimizning barcha bitiruvchilariga yoshartirish va salomatlik institutlari, SPA-markazlar, go‘zallik salonlari, xususiy klinikalar va boshqa tashkilotlarda talab mavjud."
+    },
+    {
+      "RU": "Мы проводим повышения квалификации, уникальные мастер классы. Курсы косметолог Харьков - это хорошее вложение, инвестиция в будущий заработок специалиста получившего наши документы, окончив обучение, и получив практические знания.",
+      "UZ": "Biz malaka oshirish kurslari va noyob mahorat darslarini o‘tkazamiz. Xarkovdagi kosmetologiya kurslari — bizning hujjatlarimizni olgan, ta’limni tamomlagan va amaliy bilimlarga ega bo‘lgan mutaxassisning kelajakdagi daromadiga yaxshi sarmoyadir."
+    }
+  ],
+  "backButton": {
+    "RU": "Вернуться ко всем статьям",
+    "UZ": "Barcha maqolalarga qaytish"
+  }
+}

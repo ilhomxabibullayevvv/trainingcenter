@@ -14,28 +14,23 @@ export default function Hero() {
             <p className="mb-4 text-lg font-medium text-[#424242]">
               {language === "RU" ? "Бесплатный вебинар" : "Bepul vebinar"}
             </p>
-
             <h1 className="mb-6 text-4xl font-bold leading-tight text-[#55A630] md:text-6xl">
               {language === "RU" ? "ПРОФЕССИЯ КОСМЕТОЛОГ" : "KOSMETOLOG KASBI"}
             </h1>
-
             <p className="mb-8 max-w-[419] text-lg text-[#424242]">
               {language === "RU"
                 ? "Приглашаем на бесплатный вебинар для профессиональных косметологов и интересующихся этой профессией"
                 : "Professional kosmetologlar va ushbu kasbga qiziqayotganlar uchun bepul vebinarga taklif qilamiz"}
             </p>
-
             <div className="flex flex-wrap gap-4">
               <button className="rounded-md border border-[#55A630] px-7 py-4 font-medium text-[#55A630] transition hover:bg-[#55A630] hover:text-white">
                 {language === "RU" ? "Зарегистрироваться" : "Ro'yxatdan o'tish"}
               </button>
-
               <button className="rounded-md border border-[#55A630] px-9 py-4 font-medium text-[#55A630] transition hover:bg-[#55A630] hover:text-white">
                 {language === "RU" ? "Узнать подробнее" : "Batafsil ma'lumot"}
               </button>
             </div>
           </div>
-
           <div className="block w-full md:w-auto">
             <Image
               src="/rectangle.png"

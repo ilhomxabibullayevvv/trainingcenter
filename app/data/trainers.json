@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Марина Спивак",
+    "position": {
+      "RU": "Главный тренер",
+      "UZ": "Bosh trener"
+    },
+    "image": "/rectangle17.jpg"
+  },
+  {
+    "name": "Елена Белогурова",
+    "position": {
+      "RU": "Тренер",
+      "UZ": "Trener"
+    },
+    "image": "/rectangle18.jpg"
+  },
+  {
+    "name": "Алина Ядчишина",
+    "position": {
+      "RU": "Тренер",
+      "UZ": "Trener"
+    },
+    "image": "/rectangle19.jpg"
+  },
+  {
+    "name": "Юлия Щукина",
+    "position": {
+      "RU": "Руководитель сети клиник LAZERINI",
+      "UZ": "LAZERINI klinikalari tarmog‘i rahbari"
+    },
+    "image": "/rectangle20.jpg"
+  }
+]

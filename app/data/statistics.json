@@ -1,0 +1,30 @@
+[
+  {
+    "number": "4000+",
+    "title": {
+      "RU": "Сертификатов мы выдали",
+      "UZ": "Biz sertifikatlar berdik"
+    }
+  },
+  {
+    "number": "3500+",
+    "title": {
+      "RU": "Моделей в нашей базе",
+      "UZ": "Bazamizdagi modellar"
+    }
+  },
+  {
+    "number": "1500+",
+    "title": {
+      "RU": "Специалистов мы обучили",
+      "UZ": "Biz mutaxassislarni o‘qitdik"
+    }
+  },
+  {
+    "number": "5500+",
+    "title": {
+      "RU": "Довольных клиентов",
+      "UZ": "Mamnun mijozlar"
+    }
+  }
+]
