@@ -2,7 +2,33 @@
 
 import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
-import trainers from "../../data/trainers.json";
+
+const trainers = [
+  {
+    name: "Марина Спивак",
+    positionRU: "Главный тренер",
+    positionUZ: "Bosh trener",
+    image: "/rectangle17.jpg",
+  },
+  {
+    name: "Елена Белогурова",
+    positionRU: "Тренер",
+    positionUZ: "Trener",
+    image: "/rectangle18.jpg",
+  },
+  {
+    name: "Алина Ядчишина",
+    positionRU: "Тренер",
+    positionUZ: "Trener",
+    image: "/rectangle19.jpg",
+  },
+  {
+    name: "Юлия Щукина",
+    positionRU: "Руководитель сети клиник LAZERINI",
+    positionUZ: "LAZERINI klinikalari tarmog‘i rahbari",
+    image: "/rectangle20.jpg",
+  },
+];
 
 export default function Trainers() {
   const { language } = useLanguage();
@@ -28,7 +54,7 @@ export default function Trainers() {
                 {trainer.name}
               </h3>
               <p className="mt-2 text-[14px] text-[#424242]">
-                {trainer.position[language]}
+                {language === "RU" ? trainer.positionRU : trainer.positionUZ}
               </p>
             </div>
           ))}

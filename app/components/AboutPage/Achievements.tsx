@@ -1,7 +1,29 @@
 "use client";
 
 import { useLanguage } from "../../context/LanguageContext";
-import achievements from "../../data/achievements.json";
+
+const achievements = [
+  {
+    number: "4000+",
+    textRU: "Сертификатов мы выдали",
+    textUZ: "Biz 4000 dan ortiq sertifikat berdik",
+  },
+  {
+    number: "3500+",
+    textRU: "Моделей в нашей базе",
+    textUZ: "Bazamizda 3500 dan ortiq model mavjud",
+  },
+  {
+    number: "1500+",
+    textRU: "Специалистов мы обучили",
+    textUZ: "1500 dan ortiq mutaxassisni o‘qitdik",
+  },
+  {
+    number: "5500+",
+    textRU: "Довольных клиентов",
+    textUZ: "5500 dan ortiq mamnun mijozlar",
+  },
+];
 
 export default function Achievements() {
   const { language } = useLanguage();
@@ -19,7 +41,7 @@ export default function Achievements() {
                 {item.number}
               </div>
               <p className="mt-2 text-center text-[15px] text-[#424242]">
-                {item.text[language]}
+                {language === "RU" ? item.textRU : item.textUZ}
               </p>
             </div>
           ))}
