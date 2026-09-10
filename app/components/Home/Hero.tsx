@@ -17,7 +17,7 @@ export default function Hero() {
             <h1 className="mb-6 text-4xl font-bold leading-tight text-[#55A630] md:text-6xl">
               {language === "RU" ? "ПРОФЕССИЯ КОСМЕТОЛОГ" : "KOSMETOLOG KASBI"}
             </h1>
-            <p className="mb-8 max-w-[419] text-lg text-[#424242]">
+            <p className="mb-8 max-w-[319] text-lg text-[#424242]">
               {language === "RU"
                 ? "Приглашаем на бесплатный вебинар для профессиональных косметологов и интересующихся этой профессией"
                 : "Professional kosmetologlar va ushbu kasbga qiziqayotganlar uchun bepul vebinarga taklif qilamiz"}
