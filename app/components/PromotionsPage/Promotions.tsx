@@ -15,7 +15,6 @@ export default function Promotions() {
             ? "Акционные предложения"
             : "Aksiyali takliflar"}
         </h1>
-
         <div className="overflow-hidden rounded-lg bg-white">
           <div className="w-full">
             <Image
@@ -30,14 +29,12 @@ export default function Promotions() {
               className="mb-[15] h-auto w-full object-cover"
             />
           </div>
-
           <div>
             <h2 className="mb-3 text-center text-[14px] font-medium text-[#424242] md:text-right">
               {language === "RU"
                 ? "Акция 2+1 в честь Черной пятницы"
                 : "Qora juma munosabati bilan 2+1 aksiyasi"}
             </h2>
-
             <div className="flex justify-center md:justify-end">
               <Link
                 href="/SpecialOffersPage"
