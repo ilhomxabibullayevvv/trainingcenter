@@ -54,36 +54,6 @@ export default function UsefulMaterials() {
       ru: "Что нужно знать о профессиональной косметике?",
       uz: "Professional kosmetika haqida nimalarni bilish kerak?",
     },
-    {
-      image: "/rectangle12.jpg",
-      ru: "Главные ошибки в уходе за кожей",
-      uz: "Teri parvarishidagi asosiy xatolar",
-    },
-    {
-      image: "/rectangle22.jpg",
-      ru: "Как выбрать косметологическую процедуру?",
-      uz: "Kosmetologik muolajani qanday tanlash kerak?",
-    },
-    {
-      image: "/rectangle23.jpg",
-      ru: "Уход за кожей после пилинга",
-      uz: "Pilingdan keyin terini parvarish qilish",
-    },
-    {
-      image: "/rectangle22.jpg",
-      ru: "Почему важно использовать SPF?",
-      uz: "Nima uchun SPF ishlatish muhim?",
-    },
-    {
-      image: "/rectangle23.jpg",
-      ru: "Основные этапы профессионального ухода",
-      uz: "Professional parvarishning asosiy bosqichlari",
-    },
-    {
-      image: "/rectangle12.jpg",
-      ru: "Как сохранить молодость кожи?",
-      uz: "Teri yoshligini qanday saqlab qolish mumkin?",
-    },
   ];
 
   const itemsPerPage = 3;

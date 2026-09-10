@@ -14,12 +14,6 @@ const images = [
   "/rectangle10.jpg",
   "/rectangle8.jpg",
   "/rectangle9.jpg",
-  "/rectangle8.jpg",
-  "/rectangle9.jpg",
-  "/rectangle10.jpg",
-  "/rectangle9.jpg",
-  "/rectangle10.jpg",
-  "/rectangle8.jpg",
 ];
 
 export default function SpecialOffers() {
