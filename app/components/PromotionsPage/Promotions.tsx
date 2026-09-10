@@ -11,8 +11,11 @@ export default function Promotions() {
     <section className="py-10">
       <div className="mx-auto w-full max-w-[1200]">
         <h1 className="mb-10 text-center text-[32px] font-bold text-[#424242]">
-          {language === "RU" ? "Акционные предложения" : "Aksiyali takliflar"}
+          {language === "RU"
+            ? "Акционные предложения"
+            : "Aksiyali takliflar"}
         </h1>
+
         <div className="overflow-hidden rounded-lg bg-white">
           <div className="w-full">
             <Image
@@ -27,16 +30,18 @@ export default function Promotions() {
               className="mb-[15] h-auto w-full object-cover"
             />
           </div>
+
           <div>
-            <h2 className="mb-3 text-right text-[14px] font-medium text-[#424242]">
+            <h2 className="mb-3 text-center text-[14px] font-medium text-[#424242] md:text-right">
               {language === "RU"
                 ? "Акция 2+1 в честь Черной пятницы"
                 : "Qora juma munosabati bilan 2+1 aksiyasi"}
             </h2>
-            <div className="flex justify-end">
+
+            <div className="flex justify-center md:justify-end">
               <Link
                 href="/SpecialOffersPage"
-                className="text-[14px] font-medium text-[#478F29]"
+                className="text-[14px] font-medium text-[#424242] hover:text-[#55A630]"
               >
                 {language === "RU"
                   ? "Подробнее про акцию"
