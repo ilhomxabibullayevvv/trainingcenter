@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 
 const images = [
@@ -30,27 +30,13 @@ export default function SpecialOffers() {
   const startIndex = currentPage * itemsPerPage;
   const currentImages = images.slice(startIndex, startIndex + itemsPerPage);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPage((prevPage) => {
-        if (prevPage === totalPages - 1) {
-          return 0;
-        }
-
-        return prevPage + 1;
-      });
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [totalPages]);
-
   return (
-    <section className="py-20">
-      <div className="mx-auto max-w-[1200] px-5">
-        <h2 className="mb-15 text-center text-3xl font-bold text-[#424242]">
-          {language === "RU" ? "Специальные предложения" : "Maxsus takliflar"}
-        </h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+    <section className="py-10 sm:py-12">
+      <div className="mx-auto w-full max-w-[1200] px-5">
+        <h1 className="mb-8 text-center text-[26px] font-bold text-[#424242] sm:mb-12 sm:text-[32px]">
+          {language === "RU" ? "Акционные предложения" : "Aksiyadagi takliflar"}
+        </h1>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {currentImages.map((image, index) => (
             <div
               key={`${image}-${startIndex + index}`}
@@ -58,12 +44,9 @@ export default function SpecialOffers() {
             >
               <Image
                 src={image}
-                alt={
-                  language === "RU"
-                    ? `Специальное предложение ${startIndex + index + 1}`
-                    : `Maxsus taklif ${startIndex + index + 1}`
-                }
+                alt="Акционное предложение"
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>
