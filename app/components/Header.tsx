@@ -14,7 +14,7 @@ export default function Header() {
   const menu = [
     {
       title: language === "RU" ? "Курсы обучения" : "O'quv kurslari",
-      href: "/#",
+      href: "/BotoxCoursePage",
     },
     {
       title: language === "RU" ? "Вебинары" : "Vebinarlar",

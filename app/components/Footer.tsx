@@ -10,7 +10,7 @@ export default function Footer() {
   const menu = [
     {
       title: language === "RU" ? "Курсы обучения" : "O'quv kurslari",
-      href: "/#",
+      href: "/BotoxCoursePage",
     },
     {
       title: language === "RU" ? "Акции" : "Aksiyalar",
