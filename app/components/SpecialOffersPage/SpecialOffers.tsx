@@ -54,36 +54,6 @@ export default function SpecialOffers() {
       ru: "Выгодная комбинация",
       uz: "Foydali kombinatsiya",
     },
-    {
-      image: "/rectangle21.jpg",
-      ru: "Выгодная комбинация",
-      uz: "Foydali kombinatsiya",
-    },
-    {
-      image: "/rectangle24.jpg",
-      ru: "Выгодная комбинация",
-      uz: "Foydali kombinatsiya",
-    },
-    {
-      image: "/rectangle25.jpg",
-      ru: "Выгодная комбинация",
-      uz: "Foydali kombinatsiya",
-    },
-    {
-      image: "/rectangle24.jpg",
-      ru: "Выгодная комбинация",
-      uz: "Foydali kombinatsiya",
-    },
-    {
-      image: "/rectangle25.jpg",
-      ru: "Выгодная комбинация",
-      uz: "Foydali kombinatsiya",
-    },
-    {
-      image: "/rectangle21.jpg",
-      ru: "Выгодная комбинация",
-      uz: "Foydali kombinatsiya",
-    },
   ];
 
   const itemsPerPage = 3;

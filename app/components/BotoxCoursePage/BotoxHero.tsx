@@ -41,7 +41,7 @@ export default function BotoxHero() {
               <button className="rounded-[5px] border border-[#55A630] px-6 py-3 text-[15px] text-[#55A630] transition hover:bg-[#55A630] hover:text-white sm:px-8 sm:py-4 sm:text-[16px]">
                 {text.register}
               </button>
-              <button className="rounded-[5px] border border-[#55A630] px-6 py-3 text-[15px] text-[#55A630] transition hover:bg-[#55A630] hover:text-white sm:px-8 sm:py-4 sm:text-[16px]">
+              <button className="rounded-[5px] border border-[#55A630] px-8 py-3 text-[15px] text-[#55A630] transition hover:bg-[#55A630] hover:text-white sm:px-8 sm:py-4 sm:text-[16px]">
                 {text.details}
               </button>
             </div>
