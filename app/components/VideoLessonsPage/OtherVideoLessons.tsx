@@ -16,7 +16,7 @@ export default function OtherVideoLessons() {
             <div className="relative mb-[30] h-[333] w-full max-w-[487] overflow-hidden rounded-lg">
               <iframe
                 className="h-full w-full rounded-lg"
-                src="https://www.youtube.com/embed/IOMgCWmqjWs"
+                src="https://www.youtube.com/embed/zB_-h7u6Yo0"
                 title={
                   language === "RU"
                     ? "Мезотерапия лица — видео урок"
@@ -41,7 +41,7 @@ export default function OtherVideoLessons() {
             <div className="relative mb-[30] h-[333] w-full max-w-[487] overflow-hidden rounded-lg">
               <iframe
                 className="h-full w-full rounded-lg"
-                src="https://www.youtube.com/embed/IOMgCWmqjWs"
+                src="https://www.youtube.com/embed/zB_-h7u6Yo0"
                 title={
                   language === "RU"
                     ? "Мезотерапия — практический видео урок"
