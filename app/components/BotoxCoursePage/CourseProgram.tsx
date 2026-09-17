@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 
 export default function CourseProgram() {
   const { language } = useLanguage();
+  const [isDay1Open, setIsDay1Open] = useState(false);
+  const [isDay2Open, setIsDay2Open] = useState(false);
 
   const content = {
     RU: {
@@ -39,6 +42,13 @@ export default function CourseProgram() {
 
       topic2:
         "Тема: Коррекция нижней трети лица, особенности лечения гипергидроза, понятие техники мезоботокса",
+
+      day2Content: [
+        "Коррекция нижней трети лица",
+        "Особенности лечения гипергидроза",
+        "Понятие техники мезоботокса",
+        "Разбор практических случаев",
+      ],
     },
 
     UZ: {
@@ -74,6 +84,13 @@ export default function CourseProgram() {
 
       topic2:
         "Mavzu: Yuzning pastki uchdan bir qismini korreksiya qilish, giperhidrozni davolash xususiyatlari, mezobotoks texnikasi tushunchasi",
+
+      day2Content: [
+        "Yuzning pastki uchdan bir qismini korreksiya qilish",
+        "Giperhidrozni davolash xususiyatlari",
+        "Mezobotoks texnikasi tushunchasi",
+        "Amaliy holatlarni tahlil qilish",
+      ],
     },
   };
 
@@ -81,22 +98,32 @@ export default function CourseProgram() {
 
   return (
     <section className="py-16">
-      <div className="mx-auto max-w-[1200] px-5">
+      <div className="mx-auto w-full max-w-[1200] px-5">
         <h2 className="mb-12 text-center text-[36px] font-bold text-[#424242]">
           {text.title}
         </h2>
         <div className="overflow-hidden rounded-[4] bg-white shadow-[0px_4px_10px_0px_#C6C6C64D]">
-          <div className="px-8 py-7 md:px-10 md:py-8">
-            <div className="grid grid-cols-[90px_1fr] gap-5 md:grid-cols-[130px_1fr] md:gap-8">
+          <div className="border-b border-[#D4D8DB] px-8 py-6 md:px-10">
+            <div className="grid grid-cols-[90px_1fr_auto] items-center gap-5 md:grid-cols-[130px_1fr_auto] md:gap-8">
               <div>
                 <h3 className="text-[16px] font-medium uppercase text-[#424242] md:text-[18px]">
                   {text.day1}
                 </h3>
               </div>
-              <div>
-                <p className="mb-6 max-w-[850] text-[13px] leading-[1.4] text-[#424242] md:text-[14px]">
-                  {text.topic1}
-                </p>
+              <p className="max-w-[850] text-[12px] leading-[1.4] text-[#777777] md:text-[13px]">
+                {text.topic1}
+              </p>
+              <button
+                type="button"
+                onClick={() => setIsDay1Open(!isDay1Open)}
+                className="flex h-[26] w-[26] shrink-0 items-center justify-center rounded-full bg-[#F3F3F3] text-[22px] font-light leading-none text-[#AFAFAF] transition hover:bg-[#55A630] hover:text-white"
+                aria-label={isDay1Open ? "Закрыть" : "Открыть"}
+              >
+                {isDay1Open ? "−" : "+"}
+              </button>
+            </div>
+            {isDay1Open && (
+              <div className="mt-8 ml-0 md:ml-[162]">
                 <h4 className="mb-4 text-[11px] font-semibold uppercase text-[#55A630]">
                   {text.theoryTitle}
                 </h4>
@@ -134,9 +161,9 @@ export default function CourseProgram() {
                   ))}
                 </div>
               </div>
-            </div>
+            )}
           </div>
-          <div className="border-t border-[#D4D8DB] px-8 py-6 md:px-10">
+          <div className="px-8 py-6 md:px-10">
             <div className="grid grid-cols-[90px_1fr_auto] items-center gap-5 md:grid-cols-[130px_1fr_auto] md:gap-8">
               <div>
                 <h3 className="text-[16px] font-medium uppercase text-[#424242] md:text-[18px]">
@@ -148,12 +175,32 @@ export default function CourseProgram() {
               </p>
               <button
                 type="button"
-                className="flex h-[26] w-[26] shrink-0 items-center justify-center rounded-full bg-[#F3F3F3] text-[22px] font-light leading-none text-[#AFAFAF]"
-                aria-label="Открыть второй день"
+                onClick={() => setIsDay2Open(!isDay2Open)}
+                className="flex h-[26] w-[26] shrink-0 items-center justify-center rounded-full bg-[#F3F3F3] text-[22px] font-light leading-none text-[#AFAFAF] transition hover:bg-[#55A630] hover:text-white"
+                aria-label={isDay2Open ? "Закрыть" : "Открыть"}
               >
-                +
+                {isDay2Open ? "−" : "+"}
               </button>
             </div>
+            {isDay2Open && (
+              <div className="mt-8 ml-0 md:ml-[162]">
+                <div className="space-y-4">
+                  {text.day2Content.map((item, index) => (
+                    <div
+                      key={index}
+                      className="grid grid-cols-[22px_1fr] gap-2"
+                    >
+                      <span className="text-[11px] font-semibold text-[#D4D8DB]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <p className="text-[11px] leading-[1.4] text-[#777777] md:text-[12px]">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
