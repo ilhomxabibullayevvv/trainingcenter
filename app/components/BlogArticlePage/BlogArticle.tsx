@@ -64,7 +64,7 @@ export default function BlogArticle() {
             </div>
           </div>
           <div className="mt-15 flex justify-center">
-            <button className="text-[14px] font-medium text-[#424242] transition hover:text-[#55A630]">
+            <button className="text-[14px] font-medium text-[#55A630]">
               {language === "RU"
                 ? "Вернуться ко всем статьям"
                 : "Barcha maqolalarga qaytish"}
